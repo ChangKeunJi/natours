@@ -1,0 +1,22 @@
+/* Applied to each elements */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /* box-sizing itself is not inherited. */
+}
+
+html {
+    // Define what 1rem is.
+    font-size: 62.5%;
+    /* For changing font-size px to rem. */
+    /* Now 1rem is 10px. */
+    /* The reason why we use % is to do not distrup default font-size of browser. */
+}
+
+body {
+    box-sizing: border-box;
+}
