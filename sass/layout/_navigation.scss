@@ -14,6 +14,14 @@
         z-index: 200;
         text-align: center;
         cursor: pointer;
+        @include respond(tab-port) {
+            top: 4rem;
+            rifht: 4rem;
+        }
+        @include respond(phone) {
+            top: 3rem;
+            rifht: 3rem;
+        }
     }
     &__background {
         height: 6rem;
@@ -26,6 +34,14 @@
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         transition: all .8s cubic-bezier(0.83, 0, 0.17, 1);
         // "cubic-bezier"; varies the animation's speed over the course of its duration
+        @include respond(tab-port) {
+            top: 4.5rem;
+            rifht: 4.5rem;
+        }
+        @include respond(phone) {
+            top: 3.5rem;
+            rifht: 3.5rem;
+        }
     }
     &__nav {
         height: 100vh;

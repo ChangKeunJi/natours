@@ -11,13 +11,30 @@
 
 html {
     // Define what 1rem is.
-    font-size: 62.5%;
+    font-size: 62.5%; //! 10px == 1rem
     /* For changing font-size px to rem. */
     /* Now 1rem is 10px. */
     /* The reason why we use % is to do not distrup default font-size of browser. */
+    // @include respond(phone) {
+    //     font-size: 50%;
+    // }
+    @include respond(tab-land) {
+        font-size: 56.25%; //! 1rem = 9px 
+        //? width <= 1200px?
+    }
+    @include respond(tab-port) {
+        font-size: 50%; //! 1rem = 8px
+        //? width <= 900px?
+    }
+    @include respond(big-desktop) {
+        font-size: 75%; //! 1rem = 12px
+    }
 }
 
 body {
     box-sizing: border-box;
     padding: 3rem;
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }
